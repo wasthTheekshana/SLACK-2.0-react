@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import { db } from "./Firebase"
+import {useCollection} from "react-firebase-hooks/firestore";
 
 
 function SideBarOption({ Icon, title, addChanneloption }) {
+  
     const addChannel = () => {
     const channelName = prompt('Please enter the channel name');
     if (channelName){
